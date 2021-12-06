@@ -40,8 +40,8 @@ header > h4 {
   overflow: hidden;
   transition: background-color 0.3s linear;
 }
-.signin:hover{
-    background-color: rgb(16, 104, 237);
+.signin:hover {
+  background-color: rgb(16, 104, 237);
 }
 main {
   height: 80vh;
@@ -59,8 +59,75 @@ main > p {
   padding: 1rem 0rem;
   word-break: break-all;
 }
+
+.bubbles {
+  position: absolute;
+  bottom: 0px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bubbles > img {
+  height: 60px;
+  animation: bubbleanimation 4s linear infinite;
+  opacity: 0;
+}
+
+.bubbles > img:nth-child(1) {
+  height: 30px;
+  animation-delay: 1s;
+}
+
+.bubbles > img:nth-child(2) {
+  height: 28px;
+  animation-delay: 1.5s;
+}
+.bubbles > img:nth-child(3) {
+  height: 40px;
+  animation-delay: 0.5s;
+}
+.bubbles > img:nth-child(4) {
+  height: 20px;
+}
+.bubbles > img:nth-child(5) {
+  height: 35px;
+  animation-delay: 2.8s;
+}
+.bubbles > img:nth-child(5) {
+  height: 33px;
+  animation-delay: 3.7s;
+}
+.bubbles > img:nth-child(6) {
+  height: 25px;
+  animation-delay: 2s;
+}
+.bubbles > img:nth-child(7) {
+  height: 15px;
+  animation-delay: 4s;
+}
 footer {
   height: 10vh;
   display: grid;
   place-items: center;
+}
+
+@keyframes bubbleanimation {
+  0% {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-99vh);
+    opacity: 0;
+  }
 }
